@@ -1,6 +1,7 @@
 # Cookiecutter Template for Terragrunt
 
 Template supports the following features:
+- `direnv` for environment variables management
 - `tfenv` for Terraform version management
 - `tgenv` for Terragrunt version management
 - `sops` for secrets management
@@ -17,14 +18,20 @@ cookiecutter https://github.com/andreygubarev/cookiecutter-terragrunt.git
 
 3. Encode your secrets using `sops`:
 ```bash
+sops -e -i .env
 find . -name "*.tfvars.sops.yaml" | xargs sops -e -i
 ```
 
-4. Put your Terraform backend configuration into `workspaces/<workspace>/terraform.tf` file.
+4. Enable `direnv`:
+```bash
+direnv allow .
+```
 
-5. Put your Terraform providers into `modules/<module>/providers.tf` file.
+5. Put your Terraform backend configuration into `workspaces/<workspace>/terraform.tf` file.
 
-6. Initialize your project:
+6. Put your Terraform providers into `modules/<module>/providers.tf` file.
+
+7. Initialize your project:
 ```bash
 cd workspaces/<workspace>
 # tfenv install
