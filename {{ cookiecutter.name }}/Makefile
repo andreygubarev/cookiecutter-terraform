@@ -6,4 +6,4 @@ help: ## Show this help
 
 .PHONY: fmt
 fmt:  ## Format Terraform files
-	find $(MAKEFILE_DIR)/terraform/ -name '*.tf' | xargs terraform fmt
+	find $(MAKEFILE_DIR)/{modules,workspaces}/ -name '*.tf' | xargs terraform fmt
