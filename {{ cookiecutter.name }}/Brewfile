@@ -1,24 +1,4 @@
-### System Dependencies #######################################################
-brew "openssl@3"
-brew "libressl"
-
-### Utilities #################################################################
-brew "ca-certificates"
-brew "curl"
-brew "wget"
-
-brew "jq"
-brew "yq"
-
-brew "gnu-sed"
-brew "gnu-tar"
-
-### Development ###############################################################
-brew "git"
-
-### DevOps ####################################################################
 brew "direnv"
+brew "sops"
 brew "tfenv"
 brew "tgenv"
-brew "cookiecutter"
-brew "sops"
