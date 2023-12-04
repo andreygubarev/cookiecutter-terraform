@@ -1,0 +1,6 @@
+# Brew
+Brewfile.lock.json
+
+# Terraform
+.terraform
+.terragrunt-cache
