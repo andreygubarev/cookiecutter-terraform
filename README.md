@@ -14,7 +14,12 @@ Template supports the following features:
 cookiecutter https://github.com/andreygubarev/cookiecutter-terragrunt.git
 ```
 
-2. Put your SOPS configuration into `.sops.yaml` file.
+2. Put your SOPS configuration into `.sops.yaml` file. For example:
+```yaml
+---
+creation_rules:
+  - pgp:
+```
 
 3. Encode your secrets using `sops`:
 ```bash
