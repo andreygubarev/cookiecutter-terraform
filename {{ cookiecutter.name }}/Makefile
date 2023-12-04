@@ -9,6 +9,7 @@ fmt:  ## Format Terraform files
 	find $(MAKEFILE_DIR)/{modules,workspaces}/ -name '*.tf' | xargs terraform fmt
 
 .PHONY: install
-install:  ## Install Terraform and Terragrunt
+install:  ## Install Dependencies
+	brew bundle install --file=$(MAKEFILE_DIR)/Brewfile
 	tfenv install
 	tgenv install
