@@ -1,4 +1,0 @@
-brew "direnv"
-brew "sops"
-brew "tfenv"
-brew "tgenv"
