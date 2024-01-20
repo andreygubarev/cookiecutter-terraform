@@ -50,21 +50,27 @@ terragrunt apply
 
 #### Encryption
 Git is used as a storage for encrypted secrets. SOPS is used to encrypt/decrypt secrets:
+
 `.sops.yaml` - SOPS configuration file
 
 Note: Git repository must not contain any unencrypted secrets.
 
 #### Environment
 Environment variables are primarily used to configure Terraform providers (e.g. AWS credentials).
+
 `.env` - user environment variables
+
 `.env.sops` - encrypted shared environment variables
 
 Direnv is used to manage environment variables and automatically load them when changing directories.
+
 `.envrc` - direnv configuration file
 
 #### Versioning
 Terraform and Terragrunt versions are managed using `tfenv` and `tgenv` respectively.
+
 `.terraform-version` - Terraform version
+
 `.terragrunt-version` - Terragrunt version
 
 #### Terragrunt Workspaces
