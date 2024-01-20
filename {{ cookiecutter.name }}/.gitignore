@@ -1,3 +1,6 @@
+# Environment
+.env
+
 # Terraform
 .terraform
 .terragrunt-cache
