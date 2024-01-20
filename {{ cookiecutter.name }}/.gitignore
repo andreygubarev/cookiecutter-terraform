@@ -1,5 +1,5 @@
-# Brew
-Brewfile.lock.json
+# Environment
+.env
 
 # Terraform
 .terraform
