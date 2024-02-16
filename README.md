@@ -23,7 +23,7 @@ creation_rules:
 
 3. Encode your secrets using `sops`:
 ```bash
-sops -e -i --input-type=dotenv --output-type=dotenv .env.sops
+sops -e -i .sops.env
 find . -name "*.tfvars.sops.yaml" | xargs sops -e -i
 ```
 
@@ -60,7 +60,7 @@ Environment variables are primarily used to configure Terraform providers (e.g. 
 
 `.env` - user environment variables
 
-`.env.sops` - encrypted shared environment variables
+`.sops.env` - encrypted shared environment variables
 
 Direnv is used to manage environment variables and automatically load them when changing directories.
 
