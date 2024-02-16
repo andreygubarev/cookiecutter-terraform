@@ -23,7 +23,7 @@ creation_rules:
 
 3. Encode your secrets using `sops`:
 ```bash
-sops -e -i .env
+sops -e -i --input-type=dotenv --output-type=dotenv .env.sops
 find . -name "*.tfvars.sops.yaml" | xargs sops -e -i
 ```
 
