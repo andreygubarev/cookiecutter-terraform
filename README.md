@@ -27,7 +27,7 @@ creation_rules:
 3. Encode your secrets using `sops`:
 
 ```bash
-find . -name "*.tfvars.sops.yaml" | xargs sops -e -i
+find . -name "*.tfvars.sops.yaml" | xargs -I {} sops -e -i {}
 ```
 
 4. Enable `direnv`:
