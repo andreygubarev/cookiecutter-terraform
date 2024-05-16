@@ -13,7 +13,7 @@ Template supports the following features:
 1. Generate your project from the project template using latest version:
 
 ```bash
-cookiecutter https://github.com/andreygubarev/cookiecutter-terragrunt.git
+cookiecutter https://github.com/andreygubarev/cookiecutter-terraform.git
 ```
 
 2. Put your SOPS configuration into `.sops.yaml` file. For example:
